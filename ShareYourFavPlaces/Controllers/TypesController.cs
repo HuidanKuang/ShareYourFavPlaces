@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShareYourFavPlaces.Controllers
 {
-    public class PlacesController : Controller
+    public class TypesController : Controller
     {
         public IActionResult Index()
         {
