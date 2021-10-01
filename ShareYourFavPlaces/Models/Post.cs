@@ -33,7 +33,13 @@ namespace ShareYourFavPlaces.Models
         [Display(Name ="Experience Description")]
         public string Experience { get; set; }
 
-        //represent parent object Type
+        //add photo
+        public string Photo { get; set; }
+
+        //fk
+        public int TypeId { get; set; }
+
+        //reference parent object Type
         public Type Type { get; set; }
     }
 }
