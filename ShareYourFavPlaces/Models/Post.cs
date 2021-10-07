@@ -25,6 +25,7 @@ namespace ShareYourFavPlaces.Models
         //add the cost of the trip
         [Range(0.01,999999)]
         [Required]
+        [DisplayFormat(DataFormatString = "{0:c}")]
         [Display(Name ="Cost of your Trip")]
         public int Cost { get; set; }
 
