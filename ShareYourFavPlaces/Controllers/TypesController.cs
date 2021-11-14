@@ -11,7 +11,6 @@ using ShareYourFavPlaces.Models;
 
 namespace ShareYourFavPlaces.Controllers
 {
-    [Authorize]
     public class TypesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -28,7 +27,6 @@ namespace ShareYourFavPlaces.Controllers
         }
 
         // GET: Types/Details/5
-        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -47,6 +45,7 @@ namespace ShareYourFavPlaces.Controllers
         }
 
         // GET: Types/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -69,6 +68,7 @@ namespace ShareYourFavPlaces.Controllers
         }
 
         // GET: Types/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -120,6 +120,7 @@ namespace ShareYourFavPlaces.Controllers
         }
 
         // GET: Types/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
