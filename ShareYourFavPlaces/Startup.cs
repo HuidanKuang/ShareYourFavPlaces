@@ -35,6 +35,18 @@ namespace ShareYourFavPlaces
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            //enable google auth
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    //access google auth section from appsetting.json
+                    IConfigurationSection googleAuth = Configuration.GetSection("Authentication:Google");
+
+                    //read google api key values from Configuration googleAuth, and save it in options
+                    options.ClientId = googleAuth["ClientId"];
+                    options.ClientSecret = googleAuth["ClientSecret"];
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
