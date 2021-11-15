@@ -46,7 +46,15 @@ namespace ShareYourFavPlaces
                     //read google api key values from Configuration googleAuth, and save it in options
                     options.ClientId = googleAuth["ClientId"];
                     options.ClientSecret = googleAuth["ClientSecret"];
+                })
+                .AddFacebook(options =>
+                {
+                    IConfigurationSection facebookAuth = Configuration.GetSection("Authentication:Facebook");
+
+                    options.AppId = facebookAuth["AppId"];
+                    options.AppSecret = facebookAuth["AppSecret"];
                 });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
