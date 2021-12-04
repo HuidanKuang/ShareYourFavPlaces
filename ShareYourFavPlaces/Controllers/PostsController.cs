@@ -120,7 +120,7 @@ namespace ShareYourFavPlaces.Controllers
                 return NotFound();
             }
             ViewData["TypeId"] = new SelectList(_context.Types, "TypeId", "Name", post.TypeId);
-            return View(post);
+            return View("Edit",post);
         }
 
         // POST: Posts/Edit/5
