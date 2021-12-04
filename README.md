@@ -7,5 +7,10 @@ Function:
 In this website, people can share a post of their recommended place, including a title, place name, cost of the trip, photo and trip type.
 Create, edit, view and delete the post functions are included.
 
-Azure Link:
+SmarterAsp.net Link:
+http://huidankuang-001-site1.itempurl.com/
+
+Azure Link(not avilable anymore):
 https://shareyourfavplaces.azurewebsites.net/
+
+*Because Google and Facebook authentication do not allow http URI, so that Google and Facebook authentication only exist in local host.
