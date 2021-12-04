@@ -111,13 +111,13 @@ namespace ShareYourFavPlaces.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return View("404");
             }
 
             var post = await _context.Posts.FindAsync(id);
             if (post == null)
             {
-                return NotFound();
+                return View("404");
             }
             ViewData["TypeId"] = new SelectList(_context.Types, "TypeId", "Name", post.TypeId);
             return View("Edit",post);
